@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syadam Radyan Anwar | Software Engineer</title>
+    <link rel="icon" type="image/png" href="photo/profile/Profile Image.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Adam's Portofolio</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Work Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Adam's Portofolio</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Work Experience</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="photo/profile/Profile Image.png" alt="Syadam Radyan Anwar profile picture" class="profile-pic" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title"><span id="typed-name"></span></h1>
+            <p class="section__text__p2">Software Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./CV_SYADAM_RADYAN_ANWAR.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+            </div>
+                <div id="socials-container">
+                    <a href="https://www.linkedin.com/in/syadamradyananwar/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/AdamRadyan" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/adamradyan" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container-about">
+            <div class="text-container">
+                <p>
+                    Computer Science graduate with a double degree from the University of Indonesia and Asia e University. Proficient in Java, JavaScript, PHP, Python, HTML, CSS, and experienced with both SQL and NoSQL databases. Skilled in modern frameworks and tools such as Laravel, Node.js, React, Tailwind CSS, Docker, and Filament. Strong background in full-stack web development, including API integration, responsive design, and scalable software solutions.
+                </p>
+            </div>
+            <div class="about-details-container">
+                <h2 class="experience-sub-title">Education</h2>
+                <div class="about-containers">
+                    <div class="details-container">
+                        <h3>Asia e University (AeU)</h3>
+                        <p>Bachelor of Information Communication Technology<br>2021 - 2025 | GPA: 3.53</p>
+                    </div>
+                    <div class="details-container">
+                        <h3>CEP CCIT Universitas Indonesia</h3>
+                        <p>Associate of Software Engineering<br>2021 - 2023 | GPA: 3.30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Work Experience</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Dec 2024 - Present</div>
+                <div class="timeline-content">
+                    <h3>Backend Developer</h3>
+                    <p>VnC Studio - South Jakarta</p>
+                    <ul>
+                        <li>Designed and implemented efficient backend systems to support web applications.</li>
+                        <li>Collaborated closely with frontend developers and clients to deliver seamless user experiences.</li>
+                        <li>Optimized database structures and queries, ensuring high performance and scalability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jan 2025 - Apr 2025</div>
+                <div class="timeline-content">
+                    <h3>Full Stack Web Developer</h3>
+                    <p>MTs Assa’adah - East Jakarta</p>
+                    <ul>
+                        <li>Developed and maintained user-friendly web applications using modern technologies.</li>
+                        <li>Optimized backend operations through efficient database management and API integration.</li>
+                        <li>Collaborated to design solutions that improved user engagement by up to 85%.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jun 2023 - Oct 2023</div>
+                <div class="timeline-content">
+                    <h3>Software Developer</h3>
+                    <p>Shasha Printing - South Jakarta</p>
+                    <ul>
+                        <li>Developed a cashier and inventory management system using PHP Native and a SQL database.</li>
+                        <li>Implemented a money report feature, improving revenue tracking by 95%.</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Apr 2023 - Jun 2023</div>
+                <div class="timeline-content">
+                    <h3>AI Community Surfer</h3>
+                    <p>TELUS International AI Data Solutions - Remote</p>
+                    <ul>
+                        <li>Evaluated the accuracy and relevance of search results to improve AI models.</li>
+                        <li>Increased overall search efficiency by 15% through critical feedback.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+    <p class="section__text__p1">My Technical</p>
+    <h1 class="title">Skills</h1>
+    <div class="skills-container">
+        <div class="details-container">
+            <h3 class="skills-sub-title">Programming Languages</h3>
+            <div class="article-container">
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo">
+                    <p>Java</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+                    <p>JavaScript</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP logo">
+                    <p>PHP</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python logo">
+                    <p>Python</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5 logo">
+                    <p>HTML</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3 logo">
+                    <p>CSS</p>
+                </article>
+            </div>
+        </div>
+        <div class="details-container">
+            <h3 class="skills-sub-title">Frameworks & Tools</h3>
+            <div class="article-container">
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel logo">
+                    <p>Laravel</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js logo">
+                    <p>Node.js</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React logo">
+                    <p>React</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js logo" style="background-color: white; border-radius: 50%;">
+                    <p>Next.js</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS logo">
+                    <p>Tailwind</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap logo">
+                    <p>Bootstrap</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker logo">
+                    <p>Docker</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL logo">
+                    <p>MySQL</p>
+                </article>
+                <article>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB logo">
+                    <p>MongoDB</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="about-containers">
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/metri.jpg" alt="Creative Agency Website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Creative Agency Website</h2>
+            <p class="project-description">Built the Metri.id backend with Laravel and Filament for easy management of multiple company brands.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/cement.jpg" alt="Order Report Website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Order Report Dashboard</h2>
+            <p class="project-description">Developed a dashboard using React.js and Node.js with a Drizzle database to manage and display web order reports.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/car rental.jpg" alt="Car Rental Website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Car Rental Website</h2>
+            <p class="project-description">A full-featured car rental platform built with PHP, featuring a complete CRUD system and a responsive design.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/truck.jpg" alt="Truck Service Form Digitalization" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Truck Service Form for Arista</h2>
+            <p class="project-description">Digitalized the truck service workflow by transforming paper forms into an efficient, user-friendly digital system.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/pos system.jpg" alt="POS System" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">POS System for Printing Industries</h2>
+            <p class="project-description">A robust cashier and inventory management program using PHP with comprehensive sales reporting.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+        
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/Bookmarks.png" alt="Bookmarks Automation" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Bookmarks Automation for ENI Oil & Gas</h2>
+            <p class="project-description">A Python script to automate the process of organizing and managing browser bookmarks for corporate use.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/cement.jpg" alt="Bina Bahama Nusantara Website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Cement Factory CMS for PT.Bina Bahama Nusantara</h2>
+            <p class="project-description">A company profile website built with Laravel, featuring a Content Management System (CMS) for easy updates.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/travel.jpg" alt="Greyfurt Tour Website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Travel Agency Website for Greyfurt</h2>
+            <p class="project-description">A responsive travel website developed using PHP with an integrated CMS for managing tour packages.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+        
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="photo/Projects/restaurant.jpg" alt="Restaurant Booking System" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Restaurant Booking System</h2>
+            <p class="project-description">An online booking system for restaurants, built with PHP and designed to be fully responsive for all users.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="certifications">
+        <p class="section__text__p1">My</p>
+        <h1 class="title">Certifications</h1>
+        <div class="certifications-container">
+            <a href="https://drive.google.com/file/d/14ZFsluvLEnFeRJa6hnPrT-AB2iBMhQgJ/view?usp=sharing" target="_blank" class="certificate-link">
+                <div class="certificate-card">
+                    <img src="photo\certificate\Azure Course.png" alt="Sertifikat Microsoft Azure" class="certificate-img">
+                    <div class="certificate-text">
+                        <h3>Developing Microsoft Azure and Web Services</h3>
+                        <p>View Certificate</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1umO60-hO8DRkBCqm3bhpQYCGLldWuI--/view?usp=sharing" target="_blank" class="certificate-link">
+                <div class="certificate-card">
+                    <img src="photo\certificate\Intro to DB and SQL.png" alt="Sertifikat SQL Server" class="certificate-img">
+                    <div class="certificate-text">
+                        <h3>Designing Database Solutions for Microsoft SQL Server</h3>
+                        <p>View Certificate</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1C6lMzEeX4R9yZcOQ63xgknvc8aopdRgZ/view?usp=sharing" target="_blank" class="certificate-link">
+                <div class="certificate-card">
+                    <img src="photo\certificate\Toefel.png" alt="Sertifikat TOEFL" class="certificate-img">
+                    <div class="certificate-text">
+                        <h3>TOEFL Certification</h3>
+                        <p>View Certificate</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1yYYgCeYkfqK1iLslykiB5_96w3KWGxmM/view" target="_blank" class="certificate-link">
+                <div class="certificate-card">
+                    <img src="photo\certificate\CCIT.png" alt="Sertifikat IT" class="certificate-img">
+                    <div class="certificate-text">
+                        <h3>Information Technology Certification</h3>
+                        <p>View Certificate</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="https://icongr.am/clarity/email.svg?size=32&color=ccd6f6" alt="Email icon" class="contact-icon">
+                <p><a href="mailto:syadamradyan.a@gmail.com">syadamradyan.a@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="https://icongr.am/clarity/phone-handset.svg?size=32&color=ccd6f6" alt="Phone icon" class="contact-icon">
+                <p><a href="tel:+6288212670986">+62 882-1267-0986</a></p>
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="da8188c8-097c-4dfd-8135-fa2a2a1b19a9"> <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-color-1">Send Message</button>
+            </form>
+            <div id="form-result"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2025 Syadam Radyan Anwar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
